@@ -5,10 +5,53 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>小学一年级数学闯关游戏</title>
-    <script type="module" crossorigin src="/assets/index-DArtzJop.js"></script>
+    <script type="module" crossorigin src="/assets/index-D32MrzIq.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-dXUCpk4l.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- 加载提示 -->
+      <div id="loading-fallback" style="display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+        <div style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: 20px;">🧮</div>
+          <h1 style="margin: 0 0 10px 0;">数学大冒险</h1>
+          <p style="margin: 0; opacity: 0.8;">正在加载中...</p>
+          <div style="margin-top: 20px; font-size: 12px; opacity: 0.6;">
+            如果长时间显示此页面，请检查浏览器控制台
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // 5秒后如果还没加载完成，显示错误信息
+      setTimeout(() => {
+        const fallback = document.getElementById('loading-fallback');
+        if (fallback && fallback.style.display !== 'none') {
+          fallback.innerHTML = `
+            <div style="text-align: center; max-width: 500px; padding: 20px;">
+              <div style="font-size: 48px; margin-bottom: 20px;">⚠️</div>
+              <h1 style="margin: 0 0 20px 0; color: #ff6b6b;">加载失败</h1>
+              <p style="margin: 0 0 20px 0; line-height: 1.5;">
+                应用程序加载失败。请检查：<br>
+                1. 网络连接是否正常<br>
+                2. 浏览器控制台是否有错误信息<br>
+                3. 尝试刷新页面
+              </p>
+              <button onclick="window.location.reload()" style="
+                background: #4CAF50;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+              ">
+                刷新页面
+              </button>
+            </div>
+          `;
+        }
+      }, 5000);
+    </script>
   </body>
 </html>
