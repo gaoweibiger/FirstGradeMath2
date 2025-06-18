@@ -27,7 +27,7 @@ function App() {
     return (
       <div className="min-h-screen relative">
         <Background />
-        
+
         <div className="relative z-10 min-h-screen flex items-center justify-center p-4">
           <div className="bg-white bg-opacity-95 rounded-3xl shadow-2xl p-8 text-center max-w-4xl w-full animate-slideUp">
             {/* Logo区域 */}
@@ -47,12 +47,12 @@ function App() {
                 <Trophy className="w-8 h-8 text-purple-500" />
                 <span className="text-purple-700 font-medium text-center">每关10题<br/>挑战数学思维</span>
               </div>
-              
+
               <div className="flex flex-col items-center space-y-3 p-4 bg-pink-50 rounded-xl">
                 <Star className="w-8 h-8 text-pink-500" />
                 <span className="text-pink-700 font-medium text-center">星级评价<br/>激励学习兴趣</span>
               </div>
-              
+
               <div className="flex flex-col items-center space-y-3 p-4 bg-blue-50 rounded-xl">
                 <Target className="w-8 h-8 text-blue-500" />
                 <span className="text-blue-700 font-medium text-center">7大知识体系<br/>350道精选题目</span>
@@ -70,32 +70,32 @@ function App() {
                   <div className="text-lg font-bold text-purple-700 mb-2">🔷 认识平面图形</div>
                   <div className="text-purple-600">图形识别 • 特征分析 • 拼组练习 • 实际应用</div>
                 </div>
-                
+
                 <div className="bg-gradient-to-r from-blue-100 to-cyan-100 p-4 rounded-lg">
                   <div className="text-lg font-bold text-blue-700 mb-2">➖ 20以内退位减法</div>
                   <div className="text-blue-600">基础减法 • 破十法 • 想加算减 • 应用题</div>
                 </div>
-                
+
                 <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-4 rounded-lg">
                   <div className="text-lg font-bold text-green-700 mb-2">🔢 100以内数的认识</div>
                   <div className="text-green-600">数数 • 组成 • 比较 • 数位概念</div>
                 </div>
-                
+
                 <div className="bg-gradient-to-r from-yellow-100 to-orange-100 p-4 rounded-lg">
                   <div className="text-lg font-bold text-orange-700 mb-2">🧮 100以内口算</div>
                   <div className="text-orange-600">整十运算 • 拆分计算 • 连续运算 • 心算技巧</div>
                 </div>
-                
+
                 <div className="bg-gradient-to-r from-red-100 to-pink-100 p-4 rounded-lg">
                   <div className="text-lg font-bold text-red-700 mb-2">✏️ 100以内笔算</div>
                   <div className="text-red-600">不进位加法 • 进位加法 • 不退位减法 • 退位减法</div>
                 </div>
-                
+
                 <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-4 rounded-lg">
                   <div className="text-lg font-bold text-indigo-700 mb-2">🔗 数量关系</div>
                   <div className="text-indigo-600">部分整体 • 比多少 • 两步应用题 • 综合应用</div>
                 </div>
-                
+
                 <div className="bg-gradient-to-r from-teal-100 to-green-100 p-4 rounded-lg md:col-span-2 lg:col-span-1">
                   <div className="text-lg font-bold text-teal-700 mb-2">💰 人民币认识</div>
                   <div className="text-teal-600">面额识别 • 单位换算 • 购物计算 • 找零问题</div>
@@ -149,12 +149,12 @@ function App() {
       <div className="min-h-screen relative">
         <Background />
         <div className="relative z-10">
-          <GameBoard 
-            onGameComplete={handleGameComplete} 
+          <GameBoard
+            onGameComplete={handleGameComplete}
             onBackToMenu={backToMenu}
           />
         </div>
-        
+
         {/* 返回主页按钮 */}
         <button
           onClick={backToMenu}
